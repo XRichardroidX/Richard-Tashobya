@@ -1,0 +1,97 @@
+:root {
+    --light-beige: rgb(252, 249, 245);
+    --med-beige: rgb(221, 216, 205);
+    --dark-beige: rgb(63, 54, 44);
+    --dark-teal: rgb(25, 171, 211);
+    --v-dark-teal: rgb(16, 140, 168);
+    --med-teal: rgb(48, 213, 241);
+    --light-teal: rgb(153, 240, 245);
+    --raspberry: rgb(231, 69, 150);
+}
+
+/* ================================= 
+  Base Element Styles
+==================================== */
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body,
+  input,
+  button {
+   font-family: 'Raleway', sans-serif;
+  }
+  
+  body {
+    font: 1em/1.5;
+    background-color: var(--v-dark-teal);
+    height: 100vh;
+  }
+
+  span {
+      font-family: 'Courgette', serif;
+      font-size: 2em;
+      color: var(--raspberry);
+  }
+
+  .wrapper {
+      width: 90vw;
+      background-color: var(--light-beige);
+      border: 3px solid var(--dark-teal);
+      border-radius: 15px;
+      margin: 0 auto;
+  }
+
+  p {
+      font-size: 1.25em;
+      color: var(--dark-beige);
+  }
+  button {
+    background: var(--dark-teal);
+    color: var(--light-beige);
+    border: none;
+    border-radius: 15px;
+    display: block;
+    height: 50px;
+    width: 125px;
+    margin: 15px auto;
+    text-decoration: none;
+    -webkit-transition: 0.25s ease;
+    transition: 0.25s ease;
+ }
+
+ button:hover {
+      background-color: var(--raspberry);
+ }
+
+ textarea {
+     width: 100%;
+     margin-bottom: 25px;
+     min-height: 100px;
+ }
+
+ 
+/*===================================== 
+ Layout Styles
+==================================== */
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+header {
+    grid-column: 1/6;
+    text-align: center;
+}
+
+form {
+    grid-column: 2/5;
+}

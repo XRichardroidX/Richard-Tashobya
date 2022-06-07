@@ -2,13 +2,58 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Fork Me! FCC: Test Suite Template</title>
+    <title>Survey form</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
 
   <body>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
-    <h1>Hello World, we are software developers!</h1>
+      <div class="wrapper">
+          <header>
+              <h1 id="title">Survey Form</h1>
+              <p id="description">Please fill in the form</p>
+          </header>
+
+    <form id="survey-form">
+      <label for="name" id="name-label">Name</label>
+      <input required id="name" placeholder="Enter your name">
+      <label for="email" id="email-label">Email Address</label>
+      <input required id="email" type="email" placeholder="Enter your email">
+      <label for="age" id="number-label">Age:</label>
+      <input type="number" id="number" type="range" min="13" max="100" placeholder="Age">
+      <p>Most often I track activities by:</p>
+      <select id="dropdown">
+          <option>Time spent</option>
+          <option>Number of times completed</option>
+          <option>Location</option>
+          <option>Time of day</option>
+          <option>Theme</option>
+          <option>Project</option>
+      </select>
+      <p>I would prefer to receive notifications via:</p>
+      <input type="radio" id="app-notification" name="notification" value="app" checked>
+      <label for="app-notification">App</label>
+      <input type="radio" id="email-notification" name="notification" value="email">
+      <label for="email-notification">Email</label>
+      <p>I am interested in tracking:</p>
+      <input type="checkbox" id="projects" value="projects">
+      <label for="projects">Projects</label>
+      <input type="checkbox" id="study" value="study">
+      <label for="study">Study</label>
+      <input type="checkbox" id="physical-fitness" value="physical-fitness">
+      <label for="physical-fitness">Physical fitness</label>
+      <input type="checkbox" id="customer-contact" value="customer-contact">
+      <label for="customer-contact">Customer contact</label>
+      <input type="checkbox" id="hobbies" value="hobbies">
+      <label for="hobbies">Hobbies</label>
+      <input type="checkbox" id="other" value="other">
+      <label for="other">Other</label>
+      <p>Your suggestions and comments are welcome:</p>
+      <textarea></textarea>
+      <button id="submit" type="submit">Submit</button>
+  </form>
+</div>
+
     <script  src="js/index.js"></script>
   </body>
 </html>
